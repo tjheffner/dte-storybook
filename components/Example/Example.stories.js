@@ -4,4 +4,12 @@ export default { title: 'Example' };
 
 export const Example = (_, { loaded: { renderedStory } }) => renderedStory;
 
-Example.render = ExampleTwig;
+Example.args = {
+    foo: "It's working",
+}
+
+Example.render = async args => {
+    return await ExampleTwig({
+        ...Example.args
+    })
+}
