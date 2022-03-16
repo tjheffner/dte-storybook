@@ -8,6 +8,10 @@ module.exports = {
 
   stories: ['../components/**/*.stories.js'],
 
+  addons: [
+      "@storybook/addon-essentials"
+  ],
+
   webpackFinal: async config => {
     config.experiments = {
       ...(config.experiments ? config.experiments : {}),
